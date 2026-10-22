@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Умная теплица IoT</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="home">
+  <div class="home-card">
+    <div>
+      <div class="eyebrow">Веб-платформа · IoT · Умное сельское хозяйство</div>
+      <h1>Умная теплица IoT</h1>
+      <p><b>Учебный прототип системы мониторинга и управления теплицей.</b> Три зоны, 18 датчиков, автоматический полив с защитой насоса, вентиляция, обогрев, досветка, тревоги, журнал событий и Smart Analytics.</p>
+      <p class="muted" id="homeStatus"></p>
+      <a class="btn" href="dashboard.html">Открыть панель управления</a>
+      <a class="btn secondary" href="control.html">Управление</a>
+      <p class="muted" style="font-size:14px;margin-top:18px">Выполнил: Эсенканов Н.А., группа КС-1-24. Проверил: Каныбеков К.К.</p>
+    </div>
+    <div class="gh-scheme" aria-label="Схема теплицы с показаниями датчиков">
+      <svg viewBox="0 0 400 260" role="img" aria-label="Теплица">
+        <path class="glass" d="M20 250 V120 L200 20 L380 120 V250 Z" stroke="currentColor" stroke-opacity=".45" stroke-width="3"/>
+        <path d="M200 20 V250 M20 120 H380" stroke="currentColor" stroke-opacity=".2" stroke-width="2"/>
+        <g class="leaf">
+          <ellipse cx="80" cy="225" rx="22" ry="12"/><ellipse cx="150" cy="222" rx="22" ry="14"/>
+          <ellipse cx="250" cy="222" rx="22" ry="14"/><ellipse cx="320" cy="225" rx="22" ry="12"/>
+        </g>
+        <g class="stem" stroke-width="4"><path d="M80 250 V230 M150 250 V228 M250 250 V228 M320 250 V230"/></g>
+      </svg>
+      <div class="chip" style="left:16px;top:16px" id="chipTemp"></div>
+      <div class="chip" style="right:16px;top:16px" id="chipHum"></div>
+      <div class="chip" style="left:16px;top:60px" id="chipSoil"></div>
+      <div class="chip" style="right:16px;top:60px" id="chipLight"></div>
+    </div>
+  </div>
+</div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/simulator.js"></script>
+<script src="assets/js/automation.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>
