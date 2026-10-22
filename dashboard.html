@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Панель управления — Умная теплица IoT</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<main>
+  <div class="kpi-grid" id="kpis"></div>
+  <div class="zone-grid" id="zoneCards"></div>
+  <div class="grid-2">
+    <div class="card"><h2>Температура воздуха, °C</h2><div class="chart-box"><canvas id="tempChart"></canvas></div></div>
+    <div class="card"><h2>Влажность почвы, %</h2><div class="chart-box"><canvas id="soilChart"></canvas></div></div>
+  </div>
+  <div class="grid-3">
+    <div class="card"><div class="card-head"><h2>Последние тревоги</h2><a href="alerts.html">Все →</a></div><div class="list" id="lastAlerts"></div></div>
+    <div class="card"><h2>Уровень воды в баках, %</h2><div class="chart-box"><canvas id="waterChart"></canvas></div></div>
+    <div class="card"><div class="card-head"><h2>Журнал событий</h2><a href="alerts.html#events">Весь →</a></div><div class="list" id="lastEvents"></div></div>
+  </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/simulator.js"></script>
+<script src="assets/js/automation.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>
