@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Датчики — Умная теплица IoT</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<main>
+  <div class="kpi-grid cols-3" id="sensorKpis"></div>
+  <div class="card">
+    <div class="toolbar">
+      <input type="search" id="sensorSearch" placeholder="Поиск по ID датчика…">
+      <select id="sensorZone"><option value="">Все зоны</option></select>
+      <select id="sensorType"><option value="">Все типы</option></select>
+      <select id="sensorStatus"><option value="">Все состояния</option><option value="online">В сети</option><option value="offline">Не в сети</option></select>
+    </div>
+    <p class="muted" id="sensorCount"></p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>ID</th><th>Зона</th><th>Тип датчика</th><th>Поле</th><th>Значение</th><th>Состояние</th><th>Обновлено</th><th>Имитация</th></tr></thead>
+      <tbody id="sensorsBody"></tbody>
+    </table></div>
+  </div>
+</main>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/simulator.js"></script>
+<script src="assets/js/automation.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/sensors.js"></script>
+</body>
+</html>
