@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Зоны — Умная теплица IoT</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<main>
+  <div class="card" style="margin-bottom:16px">
+    <div class="toolbar" style="margin:0">
+      <input type="search" id="zoneSearch" placeholder="Поиск зоны по названию или культуре…">
+      <select id="zoneStatus">
+        <option value="">Любой риск</option><option value="normal">Норма</option><option value="warning">Внимание</option><option value="critical">Критично</option>
+      </select>
+      <select id="zoneMode"><option value="">Любой режим</option><option value="auto">АВТО</option><option value="manual">РУЧНОЙ</option></select>
+    </div>
+  </div>
+  <div class="zone-grid" id="zoneCards"></div>
+  <div class="card">
+    <h2>Показания и пороги зон</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Зона</th><th>Температура</th><th>Влажность воздуха</th><th>Почва</th><th>Освещённость</th><th>CO2</th><th>Вода</th><th>Режим</th><th>Риск</th></tr></thead>
+      <tbody id="zonesBody"></tbody>
+    </table></div>
+  </div>
+</main>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/simulator.js"></script>
+<script src="assets/js/automation.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/zones.js"></script>
+</body>
+</html>
