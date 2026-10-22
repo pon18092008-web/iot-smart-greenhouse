@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Управление — Умная теплица IoT</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<main>
+  <div class="info"><b>АВТО</b> — устройствами управляет автоматика по порогам из «Настроек», ручные переключатели заблокированы. <b>РУЧНОЙ</b> — оператор включает устройства сам. <b>Защита:</b> при уровне воды ≤ критического насос не включается.</div>
+  <div class="control-grid" id="controlCards"></div>
+  <div class="card">
+    <h2>Тестовые сценарии</h2>
+    <p class="muted">Задают показания выбранной зоны и сразу выполняют один шаг автоматики — для проверки сценариев 1–5 из методических указаний.</p>
+    <div class="toolbar">
+      <select id="scenarioZone"></select>
+    </div>
+    <div class="scenario-grid">
+      <button class="btn secondary" data-scenario="dry">1. Сухая почва, вода есть</button>
+      <button class="btn secondary" data-scenario="dryNoWater">2. Сухая почва, мало воды</button>
+      <button class="btn secondary" data-scenario="hot">3. Перегрев</button>
+      <button class="btn secondary" data-scenario="cold">4. Холодно</button>
+      <button class="btn secondary" data-scenario="dark">5. Темно</button>
+    </div>
+    <div class="list" id="scenarioResult" style="margin-top:12px"></div>
+  </div>
+</main>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/simulator.js"></script>
+<script src="assets/js/automation.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/control.js"></script>
+</body>
+</html>
