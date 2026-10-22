@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аналитика — Умная теплица IoT</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<main>
+  <div class="info"><b>Smart Analytics</b> работает локально, без платных AI-сервисов. <b>Risk score</b> (0–100) складывается из нарушений порогов: перегрев +25, холод +20, сухая почва +25, мало воды +30, CO2 &gt; 1500 ppm +15, влажность воздуха вне диапазона +10, датчик не в сети +10. <b>Резкое изменение</b> — показание изменилось на 30% и более за один замер.</div>
+  <div class="kpi-grid cols-3" id="riskKpis"></div>
+  <div class="grid-2">
+    <div class="card"><h2>Risk score по зонам</h2><div class="chart-box"><canvas id="riskChart"></canvas></div></div>
+    <div class="card"><h2>Влажность воздуха, %</h2><div class="chart-box"><canvas id="humChart"></canvas></div></div>
+  </div>
+  <div class="grid-2">
+    <div class="card"><h2>CO2, ppm</h2><div class="chart-box"><canvas id="co2Chart"></canvas></div></div>
+    <div class="card"><h2>Резкие изменения (≥ 30% за замер)</h2>
+      <div class="table-wrap"><table><thead><tr><th>Зона</th><th>Датчик</th><th>Было</th><th>Стало</th><th>Изменение</th></tr></thead><tbody id="suddenBody"></tbody></table></div>
+    </div>
+  </div>
+  <div class="card"><h2>Рекомендации: что произошло → почему важно → что сделать</h2><div class="zone-grid" id="recs" style="margin:0"></div></div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/simulator.js"></script>
+<script src="assets/js/automation.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/analytics.js"></script>
+</body>
+</html>
