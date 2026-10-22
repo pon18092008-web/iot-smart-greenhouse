@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тревоги и журнал — Умная теплица IoT</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<main>
+  <div class="kpi-grid cols-4" id="alertKpis"></div>
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-head"><h2>Тревоги</h2></div>
+    <div class="toolbar">
+      <input type="search" id="alertSearch" placeholder="Поиск по описанию…">
+      <select id="alertZone"><option value="">Все зоны</option></select>
+      <select id="alertSeverity"><option value="">Любая важность</option><option value="warning">Внимание</option><option value="critical">Критично</option></select>
+      <select id="alertStatus"><option value="active">Активные</option><option value="">Все</option><option value="open">Открытые</option><option value="acknowledged">Принятые</option><option value="resolved">Решённые</option></select>
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>ID</th><th>Дата</th><th>Зона</th><th>Датчик</th><th>Важность</th><th>Причина</th><th>Статус</th><th>Действия</th></tr></thead>
+      <tbody id="alertsBody"></tbody>
+    </table></div>
+  </div>
+  <div class="card" id="events">
+    <div class="card-head"><h2>Журнал событий</h2><button class="btn small secondary" id="exportBtn">⬇ Экспорт CSV</button></div>
+    <div class="toolbar">
+      <input type="search" id="eventSearch" placeholder="Поиск по событию…">
+      <select id="eventZone"><option value="">Все зоны</option></select>
+      <select id="eventSource"><option value="">Все источники</option><option value="automation">Автоматика</option><option value="manual">Оператор</option><option value="system">Система</option></select>
+    </div>
+    <p class="muted" id="eventCount"></p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>№</th><th>Время</th><th>Зона</th><th>Источник</th><th>Действие</th><th>Описание</th></tr></thead>
+      <tbody id="eventsBody"></tbody>
+    </table></div>
+  </div>
+</main>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/simulator.js"></script>
+<script src="assets/js/automation.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/alerts.js"></script>
+</body>
+</html>
