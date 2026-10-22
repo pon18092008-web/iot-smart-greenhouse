@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Настройки — Умная теплица IoT</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<main>
+  <div class="grid-2">
+    <div class="card">
+      <h2>Общие параметры</h2>
+      <form class="form" id="generalForm">
+        <label class="full">Название теплицы<input id="ghNameInput" required maxlength="40"></label>
+        <label>Скорость симуляции
+          <select id="speedInput"><option value="3">Замер каждые 3 с</option><option value="5">Каждые 5 с</option><option value="10">Каждые 10 с</option></select></label>
+        <label>Тема
+          <select id="themeInput"><option value="dark">Тёмная</option><option value="light">Светлая</option></select></label>
+        <div class="form-actions full"><button class="btn" type="submit">Сохранить</button></div>
+      </form>
+    </div>
+    <div class="card">
+      <h2>Данные</h2>
+      <p class="muted" id="dataInfo"></p>
+      <button class="btn danger" id="resetBtn">Сбросить данные к исходным</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-head"><h2>Пороговые значения зоны</h2><select id="thZone"></select></div>
+    <p class="muted">Учебные значения, не агрономические нормы. Гистерезис — насколько показание должно вернуться назад, чтобы устройство выключилось.</p>
+    <form id="thForm">
+      <div class="settings-grid" id="thFields"></div>
+      <div class="form-actions" style="margin-top:14px"><button class="btn" type="submit">Сохранить пороги</button><button class="btn secondary" type="button" id="thDefault">Значения по умолчанию</button></div>
+    </form>
+  </div>
+</main>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/simulator.js"></script>
+<script src="assets/js/automation.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/settings.js"></script>
+</body>
+</html>
